@@ -5,6 +5,7 @@ const BookingSchema = new mongoose.Schema({
     time: { type: String, required: true },
     workType: { type: String, required: true }, // Полная/частичная чистка
     carType: { type: String, required: true }, // Тип кузова
+    number: { type: String, required: true },
     interiorMaterial: { type: String, required: true }, // Материал салона
 }, { timestamps: true });
 

@@ -1,0 +1,56 @@
+
+.service {
+    margin-left: auto;
+    padding: 10px;
+    justify-items: center;
+
+}
+
+.itemServiceName {
+
+    padding: 10px;
+    border: 1px solid darkslateblue;
+    width: 470px;
+    text-align: center;
+    color: #ed7d1d ;
+    background-color:#b0b7bf;
+}
+.selected {
+    color: #ed7d1d;
+    background-color: #b0b7bf;
+    border-radius: 5px;
+}
+
+/* Одна ячейка */
+.itemTableServiceName {
+    padding: 10px;
+    border: 1px solid darkslateblue;
+    text-align: center;
+    color: #ed7d1d ;
+    background-color:#b0b7bf;
+
+}
+
+/* Одна строка таблицы */
+.tableRow {
+    display: grid;
+    grid-template-columns: 150px repeat(5, 80px); /* одна колонка для Type + 5 колонок для деталей */
+    align-items: center;
+}
+
+/* Вся таблица */
+.tableService {
+    margin-left: auto; /* Центрируем таблицу по горизонтали */
+    margin-right: auto; /* Центрируем таблицу по горизонтали */
+    margin-top: 20px;
+    max-width: 470px;
+    margin-bottom: 400px;
+}
+
+.tableContent {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+        max-width: 470px;
+}
+
+

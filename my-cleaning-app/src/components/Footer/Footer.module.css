@@ -1,0 +1,76 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1a252f; /* Sleek dark background */
+    color: #e0e6ed; /* Soft white for readability */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    z-index: 1000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.main_footer_phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.main_footer_phone:hover {
+    transform: translateY(-2px); /* Subtle lift on hover */
+    color: #66b2ff; /* Highlight color */
+}
+
+.footer_p_name {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+    color: #4da8ff; /* Vibrant accent */
+    animation: slideUp 2s infinite ease-in-out; /* Smooth animation */
+}
+
+.main_footer_phone a,
+.main_footer_phone p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #b0bec5;
+    text-decoration: none;
+}
+
+.main_footer_phone a:hover {
+    color: #66b2ff;
+}
+
+.main_footer_phone svg {
+    font-size: 1.5rem; /* Icon size */
+    color: #b0bec5;
+    transition: color 0.2s ease;
+}
+
+.main_footer_phone a:hover svg {
+    color: #66b2ff; /* Icon hover color */
+}
+
+@keyframes slideUp {
+    0%, 100% { transform: translateY(10px); opacity: 0; }
+    50% { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .main_footer_phone {
+        width: 100%;
+        text-align: center;
+    }
+}
