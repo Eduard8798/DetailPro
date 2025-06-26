@@ -1,12 +1,9 @@
-import ClientPage from '../components/ClientPage';
+import Home from '../components/Home/page'
 
 const Page = () => {
     return (
         <div>
-            <h1>Hello world</h1>
-            <a href={'/'}>General</a>
-            <a href={'/about'}>About</a>
-            <ClientPage/>
+            <Home/>
         </div>
     );
 };

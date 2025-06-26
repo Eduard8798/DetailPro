@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&display=swap');
+.context {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url('https://i.postimg.cc/8zbLcjrW/porche-home-page1620x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+
+.tittle {
+    color: #ffffff;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 150px;
+    position: relative;
+    left: 40px;
+
+    line-height: 0.8;
+    top: 100px;
+}
+.tittle_about{
+    background-color: #070707;
+    padding-bottom: 100px;
+
+}
+.text_about{
+    color: white;
+    padding: 15px;
+    font-size: 50px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 100px;
+
+}
+.text_description_about{
+    color: white;
+    padding: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 100px;
+}
+.brand{
+    color: #ffffff;
+    font-size: 74px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    left: 40px;
+    position: relative;
+}
+
+.content_item {
+    padding-bottom: 150px;
+}
+
+
+.content_item_work{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url('https://i.postimg.cc/bNMRhNFp/keramika-1.jpg');
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 40vh;
+    background-size: cover;
+}
+
