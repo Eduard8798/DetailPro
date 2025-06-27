@@ -12,6 +12,7 @@
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
     z-index: 1000;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
 }
 
 .main_footer_phone {
@@ -23,16 +24,16 @@
 }
 
 .main_footer_phone:hover {
-    transform: translateY(-2px); /* Subtle lift on hover */
-    color: #66b2ff; /* Highlight color */
+    transform: translateY(-2px);
+    color: #66b2ff;
 }
 
 .footer_p_name {
     font-weight: 600;
     font-size: 1rem;
     margin: 0;
-    color: #4da8ff; /* Vibrant accent */
-    animation: slideUp 2s infinite ease-in-out; /* Smooth animation */
+    color: #4da8ff;
+    animation: slideUp 0.6s ease-in-out;
 }
 
 .main_footer_phone a,
@@ -48,7 +49,7 @@
 }
 
 .main_footer_phone svg {
-    font-size: 1.5rem; /* Icon size */
+    font-size: 1.5rem;
     color: #b0bec5;
     transition: color 0.2s ease;
 }

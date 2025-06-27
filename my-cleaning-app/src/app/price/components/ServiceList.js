@@ -37,7 +37,7 @@ const ServiceList = () => {
 
         const selectedServiceData = infoService.filter(item => item.Type === setTextService);
         if (selectedServiceData.length > 0) {
-            // Собрать все детали в один массив
+
             const allDetails = selectedServiceData.flatMap(item => item.details);
             setTypeServiceShow(allDetails);
         }
