@@ -127,7 +127,7 @@
     filter: brightness(40%);
     width: 101%;
     height: 100%;
-    object-position: 50% 66% ;
+    object-position: 50% 60% ;
     object-fit: cover;
     position: absolute;
     z-index: 0;
@@ -140,7 +140,7 @@
     vertical-align: top;
     z-index: 2;
     color: #f1f1f1;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 218, 84, 0.1);
 
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 800;
