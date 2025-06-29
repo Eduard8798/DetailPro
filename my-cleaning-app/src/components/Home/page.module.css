@@ -114,36 +114,5 @@
 .gallery_four:hover {
     transform: scale(1.05);
 }
-.description_work{
-    width: 100%;
-    aspect-ratio: 5 / 1;
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    align-items: flex-start;
 
-}
-.full_img{
-    filter: brightness(40%);
-    width: 101%;
-    height: 100%;
-    object-position: 50% 60% ;
-    object-fit: cover;
-    position: absolute;
-    z-index: 0;
-}
-
-.text_full_img_container{
-    margin: 5%;
-    display: inline-block;
-    padding: 10px;
-    vertical-align: top;
-    z-index: 2;
-    color: #f1f1f1;
-    background-color: rgba(255, 218, 84, 0.1);
-
-    font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-weight: 800;
-    font-size: 25px;
-}
 
