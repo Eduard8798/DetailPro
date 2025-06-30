@@ -46,7 +46,7 @@ const ServiceList = () => {
 
     return (
         <div>
-
+<div className={styles.container}>
             <div className={styles.service}>
                 {arrService.map((item, index) => (
                     <p
@@ -74,7 +74,7 @@ const ServiceList = () => {
                 </div>
             </div>
 
-
+</div>
         </div>
     );
 };

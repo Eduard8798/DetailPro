@@ -2,27 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Lexend+Deca:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&display=swap');
-.context {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-    url('https://i.postimg.cc/8zbLcjrW/porche-home-page1620x1080.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-
-}
-
-
-.tittle {
-    color: #ffffff;
-    font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-size: 150px;
+.heroVideo{
     position: relative;
-    left: 40px;
-
-    line-height: 0.8;
-    top: 100px;
 }
+.video_overlay_text{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    position: absolute;
+    color: #ccc;
+    font-size: 200px;
+    font-weight: 800;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    z-index: 2;
+}
+.video_background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* затемнение */
+    z-index: 1;
+}
+
+
+/*.context {*/
+/*    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),*/
+/*    url('https://i.postimg.cc/8zbLcjrW/porche-home-page1620x1080.jpg');*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    height: 100vh;*/
+
+/*}*/
+
+
+/*.tittle {*/
+/*    color: #ffffff;*/
+/*    font-family: "Alumni Sans Pinstripe", sans-serif;*/
+/*    font-size: 150px;*/
+/*    position: relative;*/
+/*    left: 40px;*/
+
+/*    line-height: 0.8;*/
+/*    top: 100px;*/
+/*}*/
 .tittle_about{
     background-color: #070707;
     padding-bottom: 100px;

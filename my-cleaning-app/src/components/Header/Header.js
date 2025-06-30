@@ -6,6 +6,7 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <strong className={styles.title}>CarCleaningPro</strong>
+            <strong className={styles.title_text} >Detailing Studio</strong>
             <nav>
 <Link href={'/'} className={styles.link}>Home</Link>
 <Link href={'/about'} className={styles.link}>About</Link>

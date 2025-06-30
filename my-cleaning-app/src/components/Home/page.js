@@ -4,10 +4,29 @@ import DescriptionWork from './DescriptionWork/page'
 const Page = () => {
     return (
         <div>
-            <div className={styles.context}>
-                <p className={styles.tittle}> DETAILING </p>
-                <p className={styles.tittle}> STUDIO </p>
-            </div>
+            {/*<div>*/}
+                <div className={styles.heroVideo}>
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+
+                    >
+                        <source
+                            src="https://res.cloudinary.com/druvfoz4x/video/upload/v1751216780/serviceVideo_slonjv.mp4"
+                            type="video/mp4"/>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div className={styles.video_background}> </div>
+                    <div className={styles.video_overlay_text}>
+                        <p>DETAILING</p>
+                        <p>STUDIO</p>
+
+                    </div>
+
+                </div>
+
             <div className={styles.tittle_about}>
                 <strong className={styles.brand}>CAR Cleaning PRO</strong>
                 <p className={styles.text_about}>About Us</p>

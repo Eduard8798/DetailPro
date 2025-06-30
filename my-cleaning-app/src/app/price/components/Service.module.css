@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+.container{
 
+    justify-content: center;
+    background-color: #070707;
+}
 .service {
     margin-left: auto;
     padding: 10px;
@@ -7,27 +12,31 @@
 }
 
 .itemServiceName {
-
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 26px;
     padding: 10px;
-    border: 1px solid darkslateblue;
+    border: 1px solid #fbe349;
     width: 470px;
     text-align: center;
-    color: #ed7d1d ;
-    background-color:#b0b7bf;
+    color: #949497 ;
+    background-color:#040303;
 }
 .selected {
-    color: #ed7d1d;
-    background-color: #b0b7bf;
+
+    color: #949497;
+    background-color: #040303;
     border-radius: 5px;
 }
 
 /* Одна ячейка */
 .itemTableServiceName {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 26px;
     padding: 10px;
-    border: 1px solid darkslateblue;
+    border: 1px solid #fbe349;
     text-align: center;
-    color: #ed7d1d ;
-    background-color:#b0b7bf;
+    color: #949497;
+    background-color: #272727;
 
 }
 
@@ -40,11 +49,11 @@
 
 /* Вся таблица */
 .tableService {
-    margin-left: auto; /* Центрируем таблицу по горизонтали */
-    margin-right: auto; /* Центрируем таблицу по горизонтали */
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
     max-width: 470px;
-    margin-bottom: 400px;
+    margin-bottom: 50px;
 }
 
 .tableContent {

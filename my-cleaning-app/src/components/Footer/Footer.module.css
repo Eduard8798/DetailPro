@@ -3,8 +3,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 15px 20px;
-    background-color: #1a252f; /* Sleek dark background */
-    color: #e0e6ed; /* Soft white for readability */
+    background-color: #1a252f;
+    color: #e0e6ed;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -21,11 +21,13 @@
     align-items: center;
     gap: 6px;
     transition: transform 0.2s ease, color 0.2s ease;
+    color: #fbe349;
 }
 
 .main_footer_phone:hover {
     transform: translateY(-2px);
-    color: #66b2ff;
+    color: #4da8ff;
+
 }
 
 .footer_p_name {
@@ -35,6 +37,7 @@
     color: #4da8ff;
     animation: slideUp 0.6s ease-in-out;
 }
+
 
 .main_footer_phone a,
 .main_footer_phone p {
@@ -55,7 +58,7 @@
 }
 
 .main_footer_phone a:hover svg {
-    color: #66b2ff; /* Icon hover color */
+    color: #66b2ff;
 }
 
 @keyframes slideUp {

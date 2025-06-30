@@ -1,27 +1,37 @@
-import img from '../../../image/audiPrice.jpg'
+
 import ServiceList from './components/ServiceList'
-import Image from "next/image";
 import styles from './page.module.css'
+import React from "react";
+import FeedbackForm from '../../components/FeedbackForm/page'
 
 const Page = () => {
 
 
     return (
         <div>
-            <div className={styles.imageContainer}>
-                <div className={styles.imageOverlay}>
-                    <h1 className={styles.overlayText}>Price</h1>
-                </div>
-                <Image
-                    src={img}   // Путь к изображению в папке public
-                    alt="awesome image"
-                    width={800}  // Указываем ширину
-                    height={600} // Указываем высоту
-                    layout="responsive"  // Указываем layout
-                />
-            </div>
 
-            <ServiceList /> {/* Компонент после изображения */}
+            <div className={styles.heroVideo}>
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+
+                >
+                    <source
+                        src="https://res.cloudinary.com/druvfoz4x/video/upload/v1751285277/PriceVideo_ysqkjh.mp4"
+                        type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div className={styles.video_background}> </div>
+                <div className={styles.video_overlay_text}>
+                    <p>Price</p>
+
+                </div>
+
+            </div>
+            <ServiceList />
+            <FeedbackForm/>
         </div>
     );
 };
