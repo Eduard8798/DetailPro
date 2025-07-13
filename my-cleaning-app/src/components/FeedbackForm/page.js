@@ -1,6 +1,48 @@
-import React from 'react';
+'use client'
+import React, {useEffect, useState} from 'react';
 import styles from './FeedbackForm.module.css'
 const Page = () => {
+
+    const [form,setForm] = useState({
+        name:'',phone:'',message:''
+    });
+    const [success, setSuccess] = useState(null);
+    const [error, setError] = useState(null);
+    const handleChange = (event) => {
+        const { name ,value } = event.target;
+        setForm (prevState => ({
+            ...prevState,[name]:value
+            })
+        )
+    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSuccess(null);
+        setError(null);
+        try {
+            const res = await fetch('/api/requests', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form),
+            });
+
+            const data = await res.json();
+            console.log('data.json',data)
+
+            if (res.ok) {
+                setSuccess('Заявка отправлена ✅');
+                setForm({ name: '', phone: '', message: '' });
+            } else {
+                throw new Error(data.error || 'Ошибка при отправке');
+            }
+        } catch (err) {
+            setError(err.message || 'Что-то пошло не так');
+        }
+    }
+
+    useEffect(() => {
+        console.log('form',form)
+    }, [form]);
     return (
         <div className={styles.contact_section}>
             <div className={styles.map_container}>
@@ -18,10 +60,29 @@ const Page = () => {
                 <p className={styles.contact_subtitle}>Welcome to our showroom</p>
 
                 <form className={styles.contact_form}>
-                    <input type="text" placeholder="Your Name" className={styles.input}/>
-                    <input type="tel" placeholder="Phone Number" className={styles.input} />
-                    <textarea placeholder="Your Message" className={styles.textarea}></textarea>
-                    <button type="submit" className={styles.submit_btn}>Send Message</button>
+                    <input type="text" name='name' placeholder="Your Name"
+                           className={styles.input}
+                           value={form.name}
+                           onChange={handleChange}
+                   />
+                    <input type="tel" name='phone' placeholder="Phone Number" className={styles.input}
+                    value={form.phone}
+                           onChange={handleChange}
+                    />
+                    <textarea placeholder="Your Message" className={styles.textarea}
+                    name='message'
+                              value={form.message}
+                              onChange={handleChange}
+                    ></textarea>
+                    {!form.name || !form.phone  ?  <button type="submit" className={styles.submit_btn}>Fill in the field</button>
+                    :
+                        <button type="submit" className={styles.submit_btn}
+                        onClick={handleSubmit}
+                        >Send Message</button>
+                    }
+
+                    {success && <p className="text-green-600">{success}</p>}
+                    {error && <p className="text-red-600">{error}</p>}
                 </form>
             </div>
         </div>
