@@ -1,6 +1,6 @@
-// app/api/requests/route.js
 import { connectToDatabase } from '../../../../lib/mongodb';
 import Request from '../../../../models/Request';
+
 
 export async function POST(req) {
     try {
@@ -18,3 +18,5 @@ export async function POST(req) {
         return Response.json({ success: false, error: error.message }, { status: 500 });
     }
 }
+
+
