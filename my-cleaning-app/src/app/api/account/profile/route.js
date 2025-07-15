@@ -57,28 +57,5 @@ export async function POST(req) {
     }
 }
 
-export async function DELETE(req, { params }) {
-    try {
-        await connectToDatabase();
-
-        const { id: userId, role } = verifyToken(req);
-        const requestId = params.id;
-
-        const request = await Request.findById(requestId);
-
-        if (!request) {
-            return Response.json({ error: 'Request not found' }, { status: 404 });
-        }
 
 
-        if (role !== 'admin' && request.user?.toString() !== userId) {
-            return Response.json({ error: 'Forbidden' }, { status: 403 });
-        }
-
-        await Request.findByIdAndDelete(requestId);
-
-        return Response.json({ success: true, message: 'Request deleted' }, { status: 200 });
-    } catch (error) {
-        return Response.json({ error: error.message }, { status: 500 });
-    }
-}
