@@ -11,7 +11,7 @@ export async function POST(req) {
 
     const user = await User.findOne({ phone });
     if (!user) {
-        return Response.json({ error: 'Invalid login' }, { status: 401 });
+        return Response.json({ error: 'Invalid Login' }, { status: 401 });
     }
 
     const valid = await bcrypt.compare(password, user.passwordHash);

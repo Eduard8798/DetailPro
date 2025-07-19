@@ -9,6 +9,7 @@ const Header = () => {
             <strong className={styles.title_text} >Detailing Studio</strong>
             <nav>
 <Link href={'/'} className={styles.link}>Home</Link>
+<Link href={'/account'} className={styles.link}>My Account</Link>
 <Link href={'/about'} className={styles.link}>About</Link>
 <Link href={'/contact'} className={styles.link}>Contact</Link>
 <Link href={'/service'} className={styles.link}>Service</Link>

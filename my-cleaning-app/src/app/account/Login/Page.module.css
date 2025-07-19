@@ -1,0 +1,90 @@
+.loginPage {
+    background-color: #121212;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+.form {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.input {
+    padding: 12px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 20px;
+    outline: none;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+.input:focus {
+    border-color: #FFD700;
+}
+
+.button {
+    padding: 12px;
+    background-color: #FFD700;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: #FFD700;
+}
+
+.secondaryButton {
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 20px;
+}
+
+.secondaryButton:hover {
+    background-color: #444;
+}
+
+.linkButton {
+    margin-top: 12px;
+    text-align: center;
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.linkButton:hover {
+    color: #ffc107;
+}

@@ -1,0 +1,43 @@
+.adminContainer {
+    display: flex;
+    height: 100vh;
+    background-color: #121212;
+    color: white;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar button:hover {
+    color: #FFD700;
+}
+
+.main {
+    flex: 1;
+    padding: 40px;
+}

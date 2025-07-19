@@ -1,0 +1,84 @@
+.authPage {
+    background-color: #121212;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 24px;
+}
+
+.input {
+    padding: 12px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 22px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #FFD700;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.primaryButton {
+    padding: 12px;
+    background-color: #FFD700;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 20px;
+}
+
+.primaryButton:hover {
+    background-color: #FFD700;
+}
+
+.secondaryButton {
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 20px;
+}
+
+.secondaryButton:hover {
+    background-color: #444;
+}
