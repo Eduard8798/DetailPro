@@ -4,6 +4,7 @@ import { connectToDatabase } from '../../../../../lib/mongodb';
 import User from '../../../../../models/User'
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import {cookies} from "next/headers";
 
 export async function POST(req) {
     await connectToDatabase();
@@ -13,6 +14,7 @@ export async function POST(req) {
     if (!user) {
         return Response.json({ error: 'Invalid Login' }, { status: 401 });
     }
+
 
     const valid = await bcrypt.compare(password, user.passwordHash);
     if (!valid) {
@@ -24,6 +26,7 @@ export async function POST(req) {
         process.env.JWT_SECRET,
         { expiresIn: '7d' }
     );
+    (await cookies()).set('token', token, )
 
     return Response.json({ token, role: user.role, phoneUser: user.phone, useName:user.name }, { status: 200 });
 }

@@ -1,18 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-const mockRequests = [
-    { id: 1, name: 'John', phone: '1234567890', problem: 'Engine noise' },
-    { id: 2, name: 'Anna', phone: '0987654321', problem: 'Oil leak' },
-];
+const Requests = ({data}) => {
 
-const Requests = () => {
     return (
         <div>
             <h1>Client Requests</h1>
             <ul>
-                {mockRequests.map((req) => (
+                {data.map((req) => (
                     <li key={req.id}>
-                        <strong>{req.name}</strong> ({req.phone}): {req.problem}
+                        <strong>{req.name}</strong>
+                        <p>{req.phone}</p>createdAt
+                        {req.message ? <p>{req.message}</p> : req.message='Message empty'}
+                        <p>{new Date(req.createdAt).toLocaleDateString('ua-UA')}</p>
                         <button style={{ marginLeft: '10px' }}>Delete</button>
                     </li>
                 ))}

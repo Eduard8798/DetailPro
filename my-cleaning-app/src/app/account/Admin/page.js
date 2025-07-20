@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Dashboard from './Dashboard'
 import Requests from './Requests'
 import styles from './Admin.module.css'
@@ -12,6 +12,28 @@ const Page = ({setAuthStep}) => {
         setAuthStep('register');
     }
     const [activeTab, setActiveTab] = useState('dashboard');
+    const [data,setData] = useState(null);
+
+    const getData = async () => {
+
+        const res = await fetch('/api/account/profile',{
+            method: 'GET',
+            credentials: 'include'
+
+        })
+        const data = await res.json();
+        if (res.ok) {
+            setData(data)
+            console.log('Requests',data)
+        }
+        else {
+            console.error(data.message);
+        }
+    }
+    useEffect(()=>{
+        getData();
+        console.log('start get data')
+    },[])
     return (
         <div className={styles.adminContainer}>
             <aside className={styles.sidebar}>
@@ -23,7 +45,7 @@ const Page = ({setAuthStep}) => {
 
             <main className={styles.main}>
                 {activeTab === 'dashboard' && <Dashboard />}
-                {activeTab === 'requests' && <Requests />}
+                {activeTab === 'requests' && <Requests data={data} />}
             </main>
         </div>
     );

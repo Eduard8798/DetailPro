@@ -9,7 +9,7 @@ export async function GET(req) {
         await connectToDatabase();
 
 
-        const { id, role } = verifyToken(req);
+        const { id, role } = verifyToken();
 
         let requests;
         if (role === 'admin') {

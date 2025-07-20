@@ -1,15 +1,13 @@
 
 import jwt from 'jsonwebtoken';
+import {cookies} from "next/headers";
 
-export function verifyToken(req) {
-    const authHeader = req.headers.get('authorization');
+export async function verifyToken(req) {
+    const token = (await cookies()).get('token')?.value;
 
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    if (!token) {
         throw new Error('Unauthorized');
     }
-
-    const token = authHeader.split(' ')[1];
-
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
