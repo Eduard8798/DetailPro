@@ -1,5 +1,6 @@
 import styles from './Page.module.css';
 import React, {useState} from 'react';
+import { toast } from 'react-toastify';
 
 const LoginPage = ({setAuthStep}) => {
 
@@ -30,8 +31,10 @@ const LoginPage = ({setAuthStep}) => {
             const data = await res.json();
             if (res.ok) {
                 console.log('JWT token:', data.token);
+                toast.success("Auth success");
                 backLogin();
             } else {
+                toast.warn("Error Auth");
                 console.error(data.message);
             }
         }

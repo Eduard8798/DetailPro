@@ -9,11 +9,12 @@ export async function GET(req) {
         await connectToDatabase();
 
 
-        const { id, role } = verifyToken();
+        const { id, role } = await verifyToken();
 
         let requests;
         if (role === 'admin') {
-            requests = await Request.find().populate('user', 'phone name');
+            requests = await Request.find().lean();;
+
         } else {
             requests = await Request.find({ user: id });
         }
@@ -24,6 +25,8 @@ export async function GET(req) {
     }
 }
 
+
+
 export async function POST(req) {
     try {
         await connectToDatabase();
@@ -33,15 +36,21 @@ export async function POST(req) {
         let userPhone = null;
         let userName = null;
         try {
-            const { id } = verifyToken(req);
+            const { id } = await verifyToken();
+            console.log('TOKEN ID:', id);
             userId = id;
 
             const user = await User.findById(id);
+            if (!user) {
+                console.log('❌ Пользователь не найден по ID:', id);
+                return Response.json({ success: false, error: 'User not found' }, { status: 404 });
+            }
+
             userName = user.name ;
             userPhone = user.phone ;
 
-        } catch (_) {
-
+        } catch (e) {
+            console.log('error',e)
         }
 
         const newRequest = await Request.create({

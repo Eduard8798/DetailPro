@@ -6,6 +6,7 @@ const Page = () => {
         <div>
             <Home/>
             <FeedbackForm/>
+
         </div>
     );
 };

@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import Dashboard from './Dashboard'
 import Requests from './Requests'
 import styles from './Admin.module.css'
+import { toast } from 'react-toastify';
+import CreateRequests from "./CreateRequests";
 
 const Page = ({setAuthStep}) => {
 
@@ -24,6 +26,8 @@ const Page = ({setAuthStep}) => {
         const data = await res.json();
         if (res.ok) {
             setData(data)
+            toast.success("Requests success");
+
             console.log('Requests',data)
         }
         else {
@@ -40,12 +44,14 @@ const Page = ({setAuthStep}) => {
                 <h2 className={styles.logo}>Admin Panel</h2>
                 <button onClick={() => setActiveTab('dashboard')}>Dashboard</button>
                 <button onClick={() => setActiveTab('requests')}>Requests</button>
+                <button onClick={() => setActiveTab('create')}>Create</button>
                 <button onClick={() => window.location.reload()}>Logout</button>
             </aside>
 
             <main className={styles.main}>
                 {activeTab === 'dashboard' && <Dashboard />}
-                {activeTab === 'requests' && <Requests data={data} />}
+                {activeTab === 'create' && <CreateRequests getData={getData}/>}
+                {activeTab === 'requests' && <Requests data={data} setData={setData} />}
             </main>
         </div>
     );
