@@ -7,6 +7,7 @@ const LoginPage = ({setAuthStep}) => {
     const [phone,setPhone] = useState(null);
     const [password,setPassword] = useState(null);
     const backLogin = (e) => {
+        if (phone && password !== '')
         setAuthStep('admin');
     }
     const inputEmail = (e) => {
@@ -30,7 +31,6 @@ const LoginPage = ({setAuthStep}) => {
 
             const data = await res.json();
             if (res.ok) {
-                console.log('JWT token:', data.token);
                 toast.success("Auth success");
                 backLogin();
             } else {
@@ -68,6 +68,12 @@ const LoginPage = ({setAuthStep}) => {
 
                 <button type="submit" className={styles.button}>
                     Login
+                </button>
+
+                <button type="button" className={styles.secondaryButton}
+                onClick={()=>setAuthStep('register')}
+                >
+                    Register
                 </button>
                 <button type="button" className={styles.secondaryButton} >
                     Cancel
