@@ -15,10 +15,12 @@ const Page = ({setAuthStep}) => {
     }
     const [activeTab, setActiveTab] = useState('dashboard');
     const [data,setData] = useState(null);
+    const [page,setPage] = useState(1);
+    const [limit,setLimit] = useState(4);
 
     const getData = async () => {
 
-        const res = await fetch('/api/account/profile',{
+        const res = await fetch(`/api/account/profile?page=${page}&limit=${limit}`,{
             method: 'GET',
             credentials: 'include'
 
@@ -37,7 +39,7 @@ const Page = ({setAuthStep}) => {
     useEffect(()=>{
         getData();
         console.log('start get data')
-    },[])
+    },[limit,page])
     return (
         <div className={styles.adminContainer}>
             <aside className={styles.sidebar}>
@@ -51,7 +53,8 @@ const Page = ({setAuthStep}) => {
             <main className={styles.main}>
                 {activeTab === 'dashboard' && <Dashboard />}
                 {activeTab === 'create' && <CreateRequests getData={getData}/>}
-                {activeTab === 'requests' && <Requests data={data} setData={setData} />}
+                {activeTab === 'requests' && <Requests data={data} setData={setData}
+                                                       page={page} setPage={setPage} setLimit={setLimit} limit={limit}/>}
             </main>
         </div>
     );

@@ -53,3 +53,18 @@
 .button:hover {
     background-color: #8c0303;
 }
+
+.paginationSelect{
+    display: flex;
+    border-radius: 15px;
+    border: 1px solid #444;
+
+    margin: 15px;
+    padding: 9px;
+    justify-content: center;
+    max-width: 200px;
+    background-color: #2e2e2e;
+    font-size: 18px;
+
+
+}

@@ -26,7 +26,14 @@ export async function POST(req) {
         process.env.JWT_SECRET,
         { expiresIn: '7d' }
     );
-    (await cookies()).set('token', token, )
+
+    (await cookies()).set('token', token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'strict',
+        path: '/',
+        maxAge: 7 * 24 * 60 * 60 // 7
+    });
 
     return Response.json({ token, role: user.role, phoneUser: user.phone, useName:user.name }, { status: 200 });
 }

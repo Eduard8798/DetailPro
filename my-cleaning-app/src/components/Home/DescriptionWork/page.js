@@ -38,7 +38,7 @@ const Page = () => {
                         <br/>No streamlining and the race for quantity!
                     </p>
                 </div>
-                <img src="https://i.postimg.cc/3JL56Jkj/2benz.jpg" alt="description" className={styles.full_img}/>
+                <img src="https://res.cloudinary.com/druvfoz4x/image/upload/v1753352810/2benz_g3rgwz.jpg" alt="description" className={styles.full_img}/>
             </div>
         </div>
     );

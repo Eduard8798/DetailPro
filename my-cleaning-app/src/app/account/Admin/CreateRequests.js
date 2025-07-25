@@ -6,6 +6,8 @@ const CreateRequests = ({getData}) => {
     const [formData, setFormData] = useState({
         message:''
     });
+    const [selectedValue, setSelectedValue] = React.useState('');
+
 
     const refreshReq = async () => {
         await getData();
@@ -61,6 +63,13 @@ const CreateRequests = ({getData}) => {
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
+            <select
+                className={styles.select}
+                value={selectedValue} onChange={handleChange}>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Tinted Window">Tinted Window</option>
+                <option value="Vacuum the car">Vacuum the car</option>
+            </select>
             <textarea
                 name="message"
                 placeholder="Сообщение"

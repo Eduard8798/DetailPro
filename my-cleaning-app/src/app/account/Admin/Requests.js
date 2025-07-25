@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styles from './Requests.module.css';
 import {Bounce, toast} from "react-toastify";
 
-const Requests = ({ data,setData }) => {
+const Requests = ({ data,setData,setLimit,setPage,page,limit }) => {
 
 
     const updateList = (id) =>{
@@ -43,12 +43,37 @@ const Requests = ({ data,setData }) => {
             console.error(data.message);
         }
     };
-
+    const selectLimit = (event) => {
+        setLimit(event.target.value);
+    };
+    const selectPage = (event) => {
+        setPage(event.target.value);
+    };
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Client Requests</h1>
+            <div className={styles.paginationSelect}>
+            <p>Requests show</p>
+            <select
+                value={limit}
+                 onChange={selectLimit}>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+            <p>Page</p>
+            <select
+                value={page}
+                 onChange={selectPage}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            </div>
             <ul className={styles.list}>
-                {data.map((req) => (
+                {data.requests.map((req) => (
                     <li key={req._id} className={styles.item}>
                         <p className={styles.containerInfo}>{req.name}</p>
                         <p className={styles.containerInfo}>{req.phone}</p>
