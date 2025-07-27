@@ -1,0 +1,43 @@
+
+.context {
+    background-color: #070707;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textLabel {
+    color: #fbfbfb;
+    font-size: 36px;
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+.textLoading {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    padding-top: 60px;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+
+}
+
+.progress {
+    font-size: 700px;
+    color: transparent;
+    -webkit-text-stroke: 2px #555454;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    margin-bottom: 20px;
+}

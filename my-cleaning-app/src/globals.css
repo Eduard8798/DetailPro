@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 body {
-    /*background-color: #070707;*/
+
     overflow-y: auto;
     height: 100%;
     padding-bottom: 80px;
     overflow-x: hidden;
-    /*background-color: #070707;*/
+    background-color: #070707;
 }

@@ -5,7 +5,7 @@ import styles from './Header.module.css'
 const Header = () => {
     return (
         <header className={styles.header}>
-            <strong className={styles.title}>CarCleaningPro</strong>
+            <strong className={styles.title}>CarCleanPro</strong>
             <strong className={styles.title_text} >Detailing Studio</strong>
             <nav>
 <Link href={'/'} className={styles.link}>Home</Link>
