@@ -6,7 +6,7 @@ import styles from './Admin.module.css'
 import { toast } from 'react-toastify';
 import CreateRequests from "./CreateRequests";
 
-const Page = () => {
+const AdminPage = () => {
 
     const [activeTab, setActiveTab] = useState('dashboard');
     const [data,setData] = useState(null);
@@ -55,4 +55,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default AdminPage;
