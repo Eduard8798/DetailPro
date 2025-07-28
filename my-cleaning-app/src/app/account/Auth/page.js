@@ -4,7 +4,8 @@ import React, {useState} from 'react';
 import styles from './Page.module.css';
 import {toast} from "react-toastify";
 
-const Page = ({setAuthStep}) => {
+const AuthPage = ({setAuthStep}) => {
+
 
     const [phone,setPhone] = useState(null);
     const [name,setName] = useState(null);
@@ -107,4 +108,4 @@ const Page = ({setAuthStep}) => {
     );
 };
 
-export default Page;
+export default AuthPage;
