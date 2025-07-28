@@ -27,7 +27,7 @@ const Page = () => {
             });
 
             const data = await res.json();
-            console.log('data.json',data)
+
 
             if (res.ok) {
                 setSuccess('Заявка отправлена ✅');

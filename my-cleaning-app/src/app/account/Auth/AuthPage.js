@@ -30,7 +30,6 @@ const AuthPage = ({setAuthStep}) => {
 
         if (data){
             toast.success("New User Add success");
-            console.log('dataAuth',data);
             setRegister(true)
             setAuthStep('login');
         }

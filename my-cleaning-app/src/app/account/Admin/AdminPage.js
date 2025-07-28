@@ -24,8 +24,6 @@ const AdminPage = () => {
         if (res.ok) {
             setData(data)
             toast.success("Requests success");
-
-            console.log('Requests',data)
         }
         else {
             console.error(data.message);
