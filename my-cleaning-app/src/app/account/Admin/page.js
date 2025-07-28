@@ -1,5 +1,4 @@
 "use client";
-
 import React, {useEffect, useState} from 'react';
 import Dashboard from './Dashboard'
 import Requests from './Requests'
@@ -7,14 +6,8 @@ import styles from './Admin.module.css'
 import { toast } from 'react-toastify';
 import CreateRequests from "./CreateRequests";
 
-const Page = ({setAuthStep}) => {
+const Page = () => {
 
-    const backLogin = (e) => {
-        e.preventDefault();
-        // Тут должна быть логика авторизации
-        // если success:
-        setAuthStep('register');
-    }
     const [activeTab, setActiveTab] = useState('dashboard');
     const [data,setData] = useState(null);
     const [page,setPage] = useState(1);
@@ -40,7 +33,7 @@ const Page = ({setAuthStep}) => {
     }
     useEffect(()=>{
         getData();
-        console.log('start get data')
+
     },[limit,page])
     return (
         <div className={styles.adminContainer}>
