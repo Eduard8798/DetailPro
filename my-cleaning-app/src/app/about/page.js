@@ -36,7 +36,7 @@ const Page = () => {
                             <p className={styles.description}>
                                 This is a place where car care is carried out comprehensively and professionally,
                                 where special attention is paid to details and trifles. We promote world trends in
-                                restoration, protection and maintenance of the beauty of the car's exterior and interior.
+                                restoration, protection and maintenance of the beauty of the car&#39;s exterior and interior.
                                 <br /><br />
                                 Today we can protect the car body from aggressive environmental influences, chemical reagents,
                                 chips and scratches, increase the gloss and color depth of the paintwork, protect optics from aging,
