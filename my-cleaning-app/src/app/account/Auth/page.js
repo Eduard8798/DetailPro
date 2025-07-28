@@ -1,3 +1,5 @@
+"use client";
+
 import React, {useState} from 'react';
 import styles from './Page.module.css';
 import {toast} from "react-toastify";

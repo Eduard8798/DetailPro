@@ -1,3 +1,5 @@
+"use client";
+
 import React, {useState} from 'react';
 import styles from './Requests.module.css';
 import {Bounce, toast} from "react-toastify";
