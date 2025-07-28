@@ -4,7 +4,7 @@ import styles from './Page.module.css';
 import React, {useState} from 'react';
 import { toast } from 'react-toastify';
 
-const LoginPage = ({setAuthStep}) => {
+const Page = ({setAuthStep}) => {
 
     const [phone,setPhone] = useState(null);
     const [password,setPassword] = useState(null);
@@ -85,4 +85,4 @@ const LoginPage = ({setAuthStep}) => {
     );
 };
 
-export default LoginPage;
+export default Page;
