@@ -40,9 +40,7 @@ const Page = () => {
         }
     }
 
-    useEffect(() => {
-        console.log('form',form)
-    }, [form]);
+
     return (
         <div className={styles.contact_section}>
             <div className={styles.map_container}>
