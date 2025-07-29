@@ -170,3 +170,64 @@
         background-position: center;
     }
 }
+
+@media (max-width: 768px) {
+
+    .heroVideo {
+        width: 100%;
+        height: auto;
+    }
+
+    .heroVideo video {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .video_overlay_text {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        font-size: 36px;
+        padding: 0 8px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .video_overlay_text p {
+        margin: 0;
+    }
+
+    .brand {
+        font-size: 32px;
+        text-align: center;
+        left: 0;
+    }
+
+    .text_about {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .text_description_about {
+        font-size: 14px;
+        text-align: justify;
+        margin: 0 16px;
+    }
+
+    .content_gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px 10px;
+    }
+
+    .gallery_one,
+    .gallery_two,
+    .gallery_three,
+    .gallery_four {
+        height: 30vh;
+        background-position: center;
+    }
+}

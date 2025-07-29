@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
-
-.heroVideo{
+.heroVideo {
     position: relative;
 }
-.video_overlay_text{
+
+.video_overlay_text {
+    position: absolute;
     top: 350px;
     left: 700px;
     text-align: center;
-    position: absolute;
     color: #ccc;
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-size: 200px;
@@ -16,20 +15,19 @@
 }
 
 @media (max-width: 768px) {
-    .fixedWidthPhone {
-        width: 375px;      /* фиксированная ширина */
-        max-width: 100vw;  /* не выходить за экран */
-        height: auto;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
+    .video_overlay_text {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        padding: 0 10px;
+        white-space: normal;
+        word-break: break-word;
     }
-}
 
-/* Для больших экранов можно задать другую ширину, если нужно */
-@media (min-width: 769px) {
-    .fixedWidthPhone {
-        width: 100%;       /* или любая другая ширина */
-        max-width: 100vw;
+    .heroVideo video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }

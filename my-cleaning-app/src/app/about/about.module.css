@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
 
-.heroVideo{
+.heroVideo {
     position: relative;
 }
-.video_overlay_text{
+
+.video_overlay_text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -14,6 +15,7 @@
     font-weight: 800;
     z-index: 2;
 }
+
 .aboutWrapper {
     background-color: #0a0a0a;
     color: #e0e0e0;
@@ -49,26 +51,26 @@
 
 @media (max-width: 768px) {
     .heroVideo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 12px;
         position: relative;
+        width: 100%;
         height: auto;
+        overflow: hidden;
+    }
+
+    .heroVideo video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .video_overlay_text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 60px;
-        max-width: 90%;
-        color: #ccc;
-        text-align: center;
-        white-space: normal;
-        padding: 0 10px;
-        z-index: 2;
+        font-size: 40px;
+    }
+
+    .title,
+    .description,
+    .yellowLine {
+        margin: 0;
+        padding: 0 16px;
     }
 }

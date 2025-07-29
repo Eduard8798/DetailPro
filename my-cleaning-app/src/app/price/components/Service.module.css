@@ -28,7 +28,7 @@
     border-radius: 5px;
 }
 
-/* Одна ячейка */
+
 .itemTableServiceName {
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-size: 26px;
@@ -40,14 +40,14 @@
 
 }
 
-/* Одна строка таблицы */
+
 .tableRow {
     display: grid;
     grid-template-columns: 150px repeat(5, 80px); /* одна колонка для Type + 5 колонок для деталей */
     align-items: center;
 }
 
-/* Вся таблица */
+
 .tableService {
     margin-left: auto;
     margin-right: auto;
