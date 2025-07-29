@@ -23,32 +23,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* затемнение */
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
 }
 
 
-/*.context {*/
-/*    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),*/
-/*    url('https://i.postimg.cc/8zbLcjrW/porche-home-page1620x1080.jpg');*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    background-repeat: no-repeat;*/
-/*    height: 100vh;*/
 
-/*}*/
-
-
-/*.tittle {*/
-/*    color: #ffffff;*/
-/*    font-family: "Alumni Sans Pinstripe", sans-serif;*/
-/*    font-size: 150px;*/
-/*    position: relative;*/
-/*    left: 40px;*/
-
-/*    line-height: 0.8;*/
-/*    top: 100px;*/
-/*}*/
 .tittle_about{
     background-color: #070707;
     padding-bottom: 100px;
@@ -142,3 +122,51 @@
 }
 
 
+@media (max-width: 768px) {
+
+    .video_overlay_text {
+        font-size: 48px;
+        padding: 0 10px;
+    }
+
+
+    .text_about {
+        font-size: 32px;
+        margin-left: 16px;
+        margin-right: 16px;
+        text-align: center;
+    }
+
+    .text_description_about {
+        font-size: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+        text-align: justify;
+    }
+
+    .brand {
+        font-size: 36px;
+        left: 0;
+        text-align: center;
+    }
+
+    .tittle_about {
+        padding-bottom: 60px;
+    }
+
+
+    .content_gallery {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+        gap: 16px;
+    }
+
+    .gallery_one,
+    .gallery_two,
+    .gallery_three,
+    .gallery_four {
+        height: 30vh;
+        width: 100%;
+        background-position: center;
+    }
+}

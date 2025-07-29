@@ -16,10 +16,20 @@
 }
 
 @media (max-width: 768px) {
-    .heroVideo {
-        flex-direction: column;
-        gap: 12px;
-        padding: 12px;
+    .fixedWidthPhone {
+        width: 375px;      /* фиксированная ширина */
+        max-width: 100vw;  /* не выходить за экран */
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
     }
+}
 
+/* Для больших экранов можно задать другую ширину, если нужно */
+@media (min-width: 769px) {
+    .fixedWidthPhone {
+        width: 100%;       /* или любая другая ширина */
+        max-width: 100vw;
+    }
 }

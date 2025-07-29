@@ -33,6 +33,8 @@ const AdminPage = () => {
         getData();
 
     },[limit,page])
+
+
     return (
         <div className={styles.adminContainer}>
             <aside className={styles.sidebar}>

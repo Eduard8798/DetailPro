@@ -49,13 +49,26 @@
 
 @media (max-width: 768px) {
     .heroVideo {
+        display: flex;
         flex-direction: column;
-        gap: 12px;
+        justify-content: center;
+        align-items: center;
         padding: 12px;
+        position: relative;
+        height: auto;
     }
 
-    .yellowLine {
-        width: 100%;
+    .video_overlay_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        max-width: 90%;
+        color: #ccc;
         text-align: center;
+        white-space: normal;
+        padding: 0 10px;
+        z-index: 2;
     }
 }

@@ -72,13 +72,41 @@
 
 @media (max-width: 768px) {
     .footer {
-        flex-direction: column;
-        gap: 12px;
-        padding: 12px;
+        display: grid;
+        position: static;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        justify-items: center;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 8px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .main_footer_phone {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
         width: 100%;
         text-align: center;
+        box-sizing: border-box;
+    }
+
+    .main_footer_phone a,
+    .main_footer_phone p {
+        font-size: 0.9rem;
+        word-wrap: break-word;
+    }
+
+    .main_footer_phone svg {
+        font-size: 1.1rem;
+    }
+
+    .footer_p_name {
+        grid-column: span 2;
+        font-size: 0.85rem;
     }
 }

@@ -41,3 +41,27 @@
     position: absolute;
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    .textLabel {
+        font-size: 18px;
+        top: 25%;
+        white-space: normal;
+        padding: 0 10px;
+
+    }
+
+    .textLoading {
+        font-size: 14px;
+        top: 30%;
+        white-space: normal;
+        padding: 0 10px;
+    }
+
+    .progress {
+        position: absolute;
+        font-size: 200px;
+        top: 45%;
+        margin-bottom: 10px;
+    }
+}

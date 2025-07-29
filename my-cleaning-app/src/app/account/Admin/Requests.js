@@ -7,9 +7,13 @@ import {Bounce, toast} from "react-toastify";
 const Requests = ({ data,setData,setLimit,setPage,page,limit }) => {
 
 
-    const updateList = (id) =>{
-        setData(prev => prev.filter(item => String(item._id) !== String(id)));
-    }
+    const updateList = (id) => {
+        setData(prev => ({
+            ...prev,
+            requests: prev.requests.filter(item => String(item._id) !== String(id))
+        }));
+    };
+
     const deleteRequest = async (id) => {
         const res = await fetch(`/api/account/profile/${id}`, {
             method: 'DELETE',

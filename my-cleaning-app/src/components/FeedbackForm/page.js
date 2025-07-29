@@ -1,13 +1,14 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import styles from './FeedbackForm.module.css'
+import {Bounce, toast} from "react-toastify";
+
 const Page = () => {
 
     const [form,setForm] = useState({
         name:'',phone:'',message:''
     });
-    const [success, setSuccess] = useState(null);
-    const [error, setError] = useState(null);
+
     const handleChange = (event) => {
         const { name ,value } = event.target;
         setForm (prevState => ({
@@ -17,8 +18,7 @@ const Page = () => {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setSuccess(null);
-        setError(null);
+
         try {
             const res = await fetch('/api/requests', {
                 method: 'POST',
@@ -30,13 +30,26 @@ const Page = () => {
 
 
             if (res.ok) {
-                setSuccess('Заявка отправлена ✅');
+
                 setForm({ name: '', phone: '', message: '' });
+                toast('📧 Requests create success!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    transition: Bounce,
+                });
             } else {
-                throw new Error(data.error || 'Ошибка при отправке');
+                throw new Error(data.error || 'error send');
+
             }
         } catch (err) {
-            setError(err.message || 'Что-то пошло не так');
+
+            toast.error(`❗️ Error ,${err}`|| 'Error with send ' )
         }
     }
 
@@ -79,8 +92,7 @@ const Page = () => {
                         >Send Message</button>
                     }
 
-                    {success && <p className="text-green-600">{success}</p>}
-                    {error && <p className="text-red-600">{error}</p>}
+
                 </form>
             </div>
         </div>
