@@ -18,8 +18,7 @@ The application allows:
 - user authentication,
 - working with server-side logic and a database within a single project.
 
-This project is intended to demonstrate skills in **React / Next.js (App Router)**
-and backend development.
+This project is intended to demonstrate skills in frontend and backend development.
 
 ---
 
