@@ -4,26 +4,7 @@ import {verifyToken} from "../../../../../lib/auth";
 import Request from "../../../../../models/Request";
 import User from "../../../../../models/User";
 
-// export async function GET(req) {
-//     try {
-//         await connectToDatabase();
-//
-//
-//         const { id, role } = await verifyToken();
-//
-//         let requests;
-//         if (role === 'admin') {
-//             requests = await Request.find().lean();
-//
-//         } else {
-//             requests = await Request.find({ user: id });
-//         }
-//
-//         return Response.json(requests, { status: 200 });
-//     } catch (error) {
-//         return Response.json({ error: error.message }, { status: 401 });
-//     }
-// }
+
     export async function GET(req) {
     try {
         await connectToDatabase();
@@ -55,11 +36,11 @@ import User from "../../../../../models/User";
         }
         return Response.json({
             requests,
-            total,              // всего заявок
-            page,               // текущая страница
-            limit,              // количество на страницу
+            total,              
+            page,               
+            limit,              
             totalPages: Math.ceil(total / limit),
-                 // сами заявки
+                 
         }, { status: 200 });
 
     } catch (error) {
